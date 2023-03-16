@@ -8,7 +8,8 @@ function Section(
     description = "Order Online for Touchless Delivery",
     backgroundImg,
     leftBtnText = "Custom order",
-    rightBtnText = "Existing Inventory"
+    rightBtnText = "Existing Inventory",
+    withArrow = true
   }
 ) {
   return (
@@ -32,7 +33,9 @@ function Section(
             }
           </ButtonGroup>
         </Fade>
-        <DownArrow className="arrow-down" src="/images/down-arrow.svg" />
+        {withArrow &&
+          <DownArrow className="arrow-down" src="/images/down-arrow.svg" />
+        }
       </Buttons>
     </Wrap>
   )
@@ -50,9 +53,8 @@ const Wrap = styled.section`
   justify-content: space-between;
   align-items: center;
 
-  &:last-of-type .arrow-down {
-    opacity: 0;
-    visibility: hidden;
+  &:last-of-type {
+    padding-bottom: 45px;
   }
 `;
 

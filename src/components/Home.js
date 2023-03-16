@@ -41,6 +41,7 @@ function Home() {
           backgroundImg="accessories.jpg"
           leftBtnText="Shop now"
           rightBtnText=""
+          withArrow={false}
         />
     </Container>
   )
